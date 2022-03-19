@@ -1,1 +1,1 @@
-export {};
+export { runComponent } from './runComponent/runComponent';
