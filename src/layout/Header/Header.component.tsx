@@ -9,7 +9,7 @@ import NavBar from './components/NavBar/NavBar.component';
 import MobileToggler from './components/MobileToggler/MobileToggler.component';
 import { MobileMenu } from '@layout/index';
 import { useWindowSize } from '@hooks/index';
-import { devices } from '@styles/responsive';
+import { devices } from '@styles/index';
 
 const Header = () => {
    const [isMobileOpen, setModalOpen] =

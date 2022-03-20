@@ -19,8 +19,10 @@
       "paths": {
          "@assets/*": ["assets/*"],
          "@components/*": ["components/*"],
+         "@constants/*": ["constants/*"],
          "@hooks/*": ["hooks/*"],
          "@layout/*": ["layout/*"],
+         "@pages/*": ["pages/*"],
          "@styles/*": ["styles/*"],
          "@utils/*": ["utils/*"]
       }

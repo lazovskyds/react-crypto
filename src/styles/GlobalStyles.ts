@@ -1,18 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
+import {
+   openSansRegular,
+   openSansSemiBold,
+   openSansBold,
+} from '@assets/fonts/index';
+import { colors } from './colors';
 
-import openSansRegular from '../assets/fonts/opensans-regular.ttf';
-import openSansSemiBold from '../assets/fonts/opensans-semibold.ttf';
-import openSansBold from '../assets/fonts/opensans-bold.ttf';
-
-import colors from './colors';
-
-const { gray, background } = colors;
-
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
    * {
       font-family: 'Open Sans', sans-serif;
       box-sizing: border-box;
-      color: ${gray};
+      color: ${colors.gray};
       margin: 0;
    }
 
@@ -22,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
    }
    
    body {
-      background-color: ${background};
+      background-color: ${colors.background};
       display: flex;
       flex-direction: column;
    }
@@ -71,5 +69,3 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 700;
    }
 `;
-
-export default GlobalStyle;
