@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import colors from '@styles/colors';
-
-const { blue, white } = colors;
+import { colors } from '@styles/index';
 
 export const HeaderWrapper = styled.header`
    position: fixed;
    top: 0;
    left: 0;
    right: 0;
-   background-color: ${blue};
+   background-color: ${colors.blue};
    padding: 0 15px;
    z-index: 99;
 `;
@@ -30,5 +28,5 @@ export const HeaderLogoTitle = styled.div`
    font-weight: 600;
    text-transform: uppercase;
    letter-spacing: 0.5px;
-   color: ${white};
+   color: ${colors.white};
 `;

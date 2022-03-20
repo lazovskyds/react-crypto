@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import colors from '@styles/colors';
-
-const { blue, background, lightGray } = colors;
+import { colors } from '@styles/index';
 
 export const MobileMenuOverlay = styled.div`
    position: fixed;
@@ -20,7 +18,7 @@ export const MobileMenuWrapper = styled.nav`
    height: calc(100vh - 60px);
    top: 60px;
    right: 0;
-   background-color: ${background};
+   background-color: ${colors.background};
 `;
 
 export const MobileMenuList = styled.ul`
@@ -33,13 +31,13 @@ export const MobileMenuItem = styled.li`
    font-weight: 600;
    font-size: 16px;
    padding: 20px 20px 20px 30px;
-   border-bottom: 1px solid ${lightGray};
+   border-bottom: 1px solid ${colors.lightGray};
 
    & > svg {
       height: 18px;
       width: auto;
       margin: 0 10px 0 0;
       transition: 0.4s;
-      fill: ${blue};
+      fill: ${colors.blue};
    }
 `;

@@ -36,7 +36,7 @@ const NavBar = () => {
          <NavBarList>
             {navItems.map((item) => (
                <NavBarItem key={item.title}>
-                  <NavBarLink>
+                  <NavBarLink to={item.to}>
                      {runComponent(item.icon)}
                      {item.title}
                   </NavBarLink>

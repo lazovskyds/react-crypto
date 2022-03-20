@@ -4,8 +4,10 @@ module.exports = {
    moduleNameMapper: {
       '@assets/(.*)$': '<rootDir>/src/assets/$1',
       '@components/(.*)$': '<rootDir>/src/components/$1',
+      '@constants/(.*)$': '<rootDir>/src/constants/$1',
       '@hooks/(.*)$': '<rootDir>/src/hooks/$1',
       '@layout/(.*)$': '<rootDir>/src/layout/$1',
+      '@pages/(.*)$': '<rootDir>/src/pages/$1',
       '@styles/(.*)$': '<rootDir>/src/styles/$1',
       '@utils/(.*)$': '<rootDir>/src/utils/$1',
    },

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import colors from '@styles/colors';
-
-const { white, blue } = colors;
+import { colors } from '@styles/index';
 
 export interface GeneralStyledProps {
    isOpen: boolean;
@@ -10,7 +8,7 @@ export interface GeneralStyledProps {
 export const MobileTogglerWrapper = styled.button<GeneralStyledProps>`
    display: flex;
    padding: 6px;
-   background-color: ${white};
+   background-color: ${colors.white};
    border: 0;
    border-radius: 5px;
    cursor: pointer;
@@ -21,7 +19,7 @@ export const MobileTogglerWrapper = styled.button<GeneralStyledProps>`
       props.isOpen &&
       `
       background-color: transparent;
-      border: 1px solid ${white};
+      border: 1px solid ${colors.white};
    `}
 `;
 
@@ -31,14 +29,14 @@ export const MobileTogglerController = styled.div<GeneralStyledProps>`
    svg {
       height: 14px;
       width: 14px;
-      fill: ${blue};
+      fill: ${colors.blue};
    }
 
    ${(props) =>
       props.isOpen &&
       `
       svg {
-         fill: ${white};
+         fill: ${colors.white};
       }
    `}
 `;
