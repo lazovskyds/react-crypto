@@ -52,6 +52,8 @@
    "devDependencies": {
       "@types/styled-components": "^5.1.24",
       "eslint": "^8.7.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-prettier": "^4.0.0",
       "husky": "^7.0.4",
       "jest-transform-stub": "^2.0.0",
       "lint-staged": "^12.3.7",

@@ -9,14 +9,14 @@ import NavBar from './components/NavBar/NavBar.component';
 import MobileToggler from './components/MobileToggler/MobileToggler.component';
 import { MobileMenu } from '@layout/index';
 import { useWindowSize } from '@hooks/index';
-import { devices } from '@styles/index';
+import { dimensions } from '@styles/index';
 
 const Header = () => {
-   const [isMobileOpen, setModalOpen] =
+   const [isMobileOpen, setMobileOpen] =
       useState<boolean>(false);
 
    const toggleModalOpen = () =>
-      setModalOpen((prev) => !prev);
+      setMobileOpen((prev) => !prev);
 
    const { width } = useWindowSize();
 
@@ -27,9 +27,9 @@ const Header = () => {
                <HeaderLogoTitle>Tracker</HeaderLogoTitle>
             </HeaderLogoLink>
 
-            {width && width > devices.lg && <NavBar />}
+            {width && width > dimensions.lg && <NavBar />}
 
-            {width && width <= devices.lg && (
+            {width && width <= dimensions.lg && (
                <MobileToggler
                   isOpen={isMobileOpen}
                   toggleOpen={toggleModalOpen}
@@ -37,9 +37,11 @@ const Header = () => {
             )}
          </HeaderInner>
 
-         {width && width <= devices.lg && isMobileOpen && (
-            <MobileMenu toggleOpen={toggleModalOpen} />
-         )}
+         {width &&
+            width <= dimensions.lg &&
+            isMobileOpen && (
+               <MobileMenu toggleOpen={toggleModalOpen} />
+            )}
       </HeaderWrapper>
    );
 };

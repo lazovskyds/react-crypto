@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 
 const Component = () => <div>test passed</div>;
 
-test('Renders learn react link', () => {
+test('Renders component', () => {
    render(runComponent(Component));
    const text = screen.getByText('test passed');
    expect(text).toBeInTheDocument();
