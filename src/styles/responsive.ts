@@ -1,4 +1,4 @@
-export const devices = {
+export const dimensions = {
    sm: 576,
    md: 768,
    lg: 992,

@@ -1,3 +1,3 @@
 export { GlobalStyles } from './GlobalStyles';
 export { colors } from './colors';
-export { devices } from './responsive';
+export { dimensions } from './responsive';
