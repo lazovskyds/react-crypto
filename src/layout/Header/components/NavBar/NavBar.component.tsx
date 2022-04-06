@@ -5,43 +5,30 @@ import {
    NavBarItem,
    NavBarLink,
 } from './NavBar.styles';
-import {
-   NavbarHomeIcon,
-   NavbarPortfolioIcon,
-   NavbarSeeAllIcon,
-} from '@assets/icons/index';
-import { runComponent } from '@utils/index';
 
-const NavBar = () => {
-   const navItems = [
-      {
-         to: '/',
-         icon: NavbarHomeIcon,
-         title: 'Home',
-      },
-      {
-         to: '/portfolio',
-         icon: NavbarPortfolioIcon,
-         title: 'Portfolio',
-      },
-      {
-         to: '/all',
-         icon: NavbarSeeAllIcon,
-         title: 'All coins',
-      },
-   ];
+interface NavBarProps {
+   navItems: {
+      icon: React.FunctionComponent;
+      title: string;
+      to: string;
+   }[];
+}
 
+const NavBar = ({ navItems }: NavBarProps) => {
    return (
       <NavBarWrapper>
          <NavBarList>
-            {navItems.map((item) => (
-               <NavBarItem key={item.title}>
-                  <NavBarLink to={item.to}>
-                     {runComponent(item.icon)}
-                     {item.title}
-                  </NavBarLink>
-               </NavBarItem>
-            ))}
+            {navItems.map((item) => {
+               const Icon = item.icon;
+               return (
+                  <NavBarItem key={item.title}>
+                     <NavBarLink to={item.to}>
+                        <Icon />
+                        {item.title}
+                     </NavBarLink>
+                  </NavBarItem>
+               );
+            })}
          </NavBarList>
       </NavBarWrapper>
    );

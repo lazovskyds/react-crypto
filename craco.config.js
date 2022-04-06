@@ -11,6 +11,7 @@ module.exports = {
          '@assets': resolvePath('./src/assets/'),
          '@components': resolvePath('./src/components/'),
          '@constants': resolvePath('./src/constants/'),
+         '@hocs': resolvePath('./src/hocs/'),
          '@hooks': resolvePath('./src/hooks/'),
          '@layout': resolvePath('./src/layout/'),
          '@pages': resolvePath('./src/pages/'),

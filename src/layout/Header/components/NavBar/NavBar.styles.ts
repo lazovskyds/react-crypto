@@ -24,8 +24,8 @@ export const NavBarItem = styled.li`
 
 export const NavBarLink = styled(NavLink)`
    color: ${colors.white};
-   padding: 5px 15px;
-   border-radius: 5px;
+   padding: 4px 16px;
+   border-radius: 4px;
    border: 1px solid ${colors.white};
    font-size: 14px;
    font-weight: 600;
@@ -39,6 +39,7 @@ export const NavBarLink = styled(NavLink)`
 
       & > svg {
          fill: ${colors.blue};
+         transition: 0.4s;
       }
    }
 
@@ -48,5 +49,6 @@ export const NavBarLink = styled(NavLink)`
       fill: ${colors.white};
       color: ${colors.white};
       margin-right: 6px;
+      transition: 0.4s;
    }
 `;

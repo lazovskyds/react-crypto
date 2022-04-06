@@ -10,7 +10,6 @@ import {
    MobileMenuPortfolioIcon,
    MobileMenuSeeAllIcon,
 } from '@assets/icons/index';
-import { runComponent } from '@utils/index';
 
 interface MobileMenuProps {
    toggleOpen: () => void;
@@ -39,12 +38,15 @@ const MobileMenu = ({ toggleOpen }: MobileMenuProps) => {
       <MobileMenuOverlay onClick={toggleOpen}>
          <MobileMenuWrapper>
             <MobileMenuList>
-               {navItems.map((item) => (
-                  <MobileMenuItem key={item.title}>
-                     {runComponent(item.icon)}
-                     {item.title}
-                  </MobileMenuItem>
-               ))}
+               {navItems.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                     <MobileMenuItem key={item.title}>
+                        <Icon />
+                        {item.title}
+                     </MobileMenuItem>
+                  );
+               })}
             </MobileMenuList>
          </MobileMenuWrapper>
       </MobileMenuOverlay>

@@ -25,13 +25,6 @@ export const GlobalStyles = createGlobalStyle`
       flex-direction: column;
    }
 
-   h3 {
-      margin: 0;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 30px;
-   }
-
    a {
       text-decoration: none;
    }

@@ -30,13 +30,13 @@ export const MobileMenuItem = styled.li`
    align-items: center;
    font-weight: 600;
    font-size: 16px;
-   padding: 20px 20px 20px 30px;
+   padding: 16px 16px 16px 20px;
    border-bottom: 1px solid ${colors.lightGray};
 
    & > svg {
       height: 18px;
       width: auto;
-      margin: 0 10px 0 0;
+      margin: 0 8px 0 0;
       transition: 0.4s;
       fill: ${colors.blue};
    }

@@ -5,5 +5,7 @@ export const GlobalWrapper = styled.section`
 `;
 
 export const PageWrapper = styled.section`
-   min-height: calc(100vh - 60px);
+   display: grid;
+   gap: 16px;
+   padding: 16px;
 `;

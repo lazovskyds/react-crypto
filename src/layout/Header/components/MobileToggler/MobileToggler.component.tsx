@@ -10,17 +10,11 @@ interface MobileTogglerProps {
    toggleOpen: () => void;
 }
 
-const MobileToggler = ({
-   isOpen,
-   toggleOpen,
-}: MobileTogglerProps) => {
+const MobileToggler = ({ isOpen, toggleOpen }: MobileTogglerProps) => {
    return (
-      <MobileTogglerWrapper
-         isOpen={isOpen}
-         onClick={toggleOpen}
-      >
+      <MobileTogglerWrapper isOpen={isOpen} onClick={toggleOpen}>
          <MobileTogglerController isOpen={isOpen}>
-            <HeaderTogglerIcon />
+            <HeaderTogglerIcon data-testid="toggler-icon" />
          </MobileTogglerController>
       </MobileTogglerWrapper>
    );

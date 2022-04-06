@@ -7,7 +7,7 @@ export const HeaderWrapper = styled.header`
    left: 0;
    right: 0;
    background-color: ${colors.blue};
-   padding: 0 15px;
+   padding: 0 16px;
    z-index: 99;
 `;
 
@@ -27,6 +27,5 @@ export const HeaderLogoTitle = styled.div`
    font-size: 22px;
    font-weight: 600;
    text-transform: uppercase;
-   letter-spacing: 0.5px;
    color: ${colors.white};
 `;

@@ -7,10 +7,10 @@ export interface GeneralStyledProps {
 
 export const MobileTogglerWrapper = styled.button<GeneralStyledProps>`
    display: flex;
-   padding: 6px;
+   padding: 4px;
    background-color: ${colors.white};
    border: 0;
-   border-radius: 5px;
+   border-radius: 4px;
    cursor: pointer;
    transition: 0.4s;
    border: 1px solid transparent;

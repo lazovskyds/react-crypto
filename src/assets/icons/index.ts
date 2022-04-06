@@ -1,4 +1,5 @@
 export { ReactComponent as HeaderTogglerIcon } from './toggler.svg';
+export { ReactComponent as StarIcon } from './star.svg';
 
 export { ReactComponent as MobileMenuHomeIcon } from './mobile-menu/home.svg';
 export { ReactComponent as MobileMenuPortfolioIcon } from './mobile-menu/portfolio.svg';

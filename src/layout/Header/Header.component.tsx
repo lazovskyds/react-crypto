@@ -10,13 +10,12 @@ import MobileToggler from './components/MobileToggler/MobileToggler.component';
 import { MobileMenu } from '@layout/index';
 import { useWindowSize } from '@hooks/index';
 import { dimensions } from '@styles/index';
+import { mock as NavBarMock } from './components/NavBar/NavBar.mock';
 
 const Header = () => {
-   const [isMobileOpen, setMobileOpen] =
-      useState<boolean>(false);
+   const [isMobileOpen, setMobileOpen] = useState<boolean>(false);
 
-   const toggleModalOpen = () =>
-      setMobileOpen((prev) => !prev);
+   const toggleModalOpen = () => setMobileOpen((prev) => !prev);
 
    const { width } = useWindowSize();
 
@@ -27,7 +26,7 @@ const Header = () => {
                <HeaderLogoTitle>Tracker</HeaderLogoTitle>
             </HeaderLogoLink>
 
-            {width && width > dimensions.lg && <NavBar />}
+            {width && width > dimensions.lg && <NavBar navItems={NavBarMock} />}
 
             {width && width <= dimensions.lg && (
                <MobileToggler
@@ -37,11 +36,9 @@ const Header = () => {
             )}
          </HeaderInner>
 
-         {width &&
-            width <= dimensions.lg &&
-            isMobileOpen && (
-               <MobileMenu toggleOpen={toggleModalOpen} />
-            )}
+         {width && width <= dimensions.lg && isMobileOpen && (
+            <MobileMenu toggleOpen={toggleModalOpen} />
+         )}
       </HeaderWrapper>
    );
 };
